@@ -1,0 +1,121 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #d5d0dc;
+  background-color: #2b063a;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #2b063a;
+  color: #d5d0dc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app__header {
+  margin-bottom: 24px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: #3a1d46;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.menu__item {
+  flex: 1 1 220px;
+  text-decoration: none;
+  color: #cec4d7;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 22px 28px;
+  border-bottom: 4px solid transparent;
+  /* чтобы не прыгала верстка */
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.menu__item:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.menu__item-active {
+  color: #ffffff;
+  border-bottom-color: #4bc55b;
+}
+
+.app__content {
+  background: #3a1d46;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 48px 56px;
+  min-height: 300px;
+}
+
+.page__title {
+  margin: 0 0 24px;
+  font-size: 52px;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.page__text {
+  margin: 0;
+  max-width: 980px;
+  font-size: 40px;
+  line-height: 1.35;
+  color: #bfb6ca;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: #8ee09a;
+  text-decoration: none;
+  border-bottom: 1px dashed #8ee09a;
+}
+
+.home-link:hover {
+  color: #b0f0ba;
+  border-bottom-color: #b0f0ba;
+}
+
+@media (max-width: 900px) {
+  .app {
+    padding: 16px;
+  }
+
+  .app__content {
+    padding: 24px;
+  }
+
+  .menu__item {
+    padding: 16px 18px;
+    flex-basis: 160px;
+  }
+
+  .page__title {
+    font-size: 34px;
+  }
+
+  .page__text {
+    font-size: 22px;
+  }
+}
